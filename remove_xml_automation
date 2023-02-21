@@ -1,0 +1,15 @@
+'''Working Perfectly'''
+
+'''This function removes files with extension .xml from specified dir_name'''
+
+import os
+
+#Provide Full Path to directory
+dir_name="C:\\Users\\Ritesh\\Insight\\Data Augmentation Weighing Scale Images"
+files=[f for f in os.listdir(dir_name)]
+
+#print(files)
+
+for f in files:
+    if f.endswith(('.xml')):
+        os.remove(os.path.join(dir_name,f))
